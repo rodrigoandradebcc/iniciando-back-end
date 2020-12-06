@@ -18,8 +18,6 @@ export default class UsersController {
             password,
         });
 
-        delete user.password;
-
         return response.json(user);
     }
 }
