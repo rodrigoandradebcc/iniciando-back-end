@@ -1,4 +1,5 @@
 import authConfig from '@config/auth';
+import 'reflect-metadata';
 import AppError from '@shared/errors/AppError';
 import { sign } from 'jsonwebtoken';
 import { injectable, inject } from 'tsyringe';

@@ -1,4 +1,5 @@
 import AppError from '@shared/errors/AppError';
+import 'reflect-metadata';
 import { injectable, inject } from 'tsyringe';
 import { isAfter, addHours } from 'date-fns';
 import IUsersRepository from '../repositories/IUsersRepository';
