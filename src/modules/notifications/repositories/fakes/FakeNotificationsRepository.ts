@@ -23,8 +23,6 @@ class NotificationsRepository implements INotificationsRepository {
 
         this.notifications.push(notification);
 
-        await this.ormRepository.save(notification);
-
         return notification;
     }
 }

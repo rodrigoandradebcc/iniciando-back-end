@@ -21,10 +21,7 @@ class CreateAppointmentService {
         private appointmentsRepository: IAppointmentsRepository,
 
         @inject('NotificationsRepository')
-        private notificationsRepository: INotificationsRepository,
-
-        @inject('CacheProvider')
-        private cacheProvider: ICacheProvider,
+        private notificationsRepository: INotificationsRepository, // @inject('CacheProvider') // private cacheProvider: ICacheProvider,
     ) {}
 
     public async execute({
