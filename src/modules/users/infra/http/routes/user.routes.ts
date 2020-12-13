@@ -1,7 +1,6 @@
-import uploadConfig from '@config/upload';
-import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 import { Router } from 'express';
 import multer from 'multer';
+import uploadConfig from '@config/upload';
 
 import { Segments, celebrate, Joi } from 'celebrate';
 
@@ -13,7 +12,7 @@ const usersRouter = Router();
 const usersController = new UsersController();
 const userAvatarController = new UserAvatarController();
 
-const upload = multer(uploadConfig);
+const upload = multer(uploadConfig.multer);
 
 usersRouter.post(
     '/',
