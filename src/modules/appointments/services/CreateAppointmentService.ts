@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import { injectable, inject } from 'tsyringe';
 
@@ -21,7 +22,10 @@ class CreateAppointmentService {
         private appointmentsRepository: IAppointmentsRepository,
 
         @inject('NotificationsRepository')
-        private notificationsRepository: INotificationsRepository, // @inject('CacheProvider') // private cacheProvider: ICacheProvider,
+        private notificationsRepository: INotificationsRepository,
+
+        @inject('CacheProvider')
+        private cacheProvider: ICacheProvider,
     ) {}
 
     public async execute({

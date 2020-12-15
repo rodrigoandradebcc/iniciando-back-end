@@ -1,6 +1,6 @@
 {
     "env": {
-        "es6": true,
+        "es2020": true,
         "node": true,
         "jest": true
     },
@@ -10,57 +10,45 @@
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint", "prettier"],
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
     "rules": {
-        "no-underscore-dangle": "off",
-        "prettier/prettier": "error",
-        "class-methods-use-this": "off",
-        "@typescript-eslint/camelcase": "off",
-        "no-useless-constructor": "off",
-        "import/no-duplicates": "off",
-        "lines-around-directive": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "camelcase": "off",
-        "padding-line-between-statements": "off",
-        "@typescript-eslint/no-unused-vars": [
-            "error",
-            {
-                "argsIgnorePattern": "_"
-            }
-        ],
-        "@typescript-eslint/no-empty-function": "off",
-        //   "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }],
-        "@typescript-eslint/naming-convention": [
-            "error",
-            {
-                "selector": "interface",
-                "format": ["PascalCase"],
-                "custom": {
-                    "regex": "^I[A-Z]",
-                    "match": true
-                }
-            }
-        ],
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never"
-            }
-        ]
-    },
-    "settings": {
-        "import/resolver": {
-            "typescript": {}
+      "camelcase": "off",
+      "no-useless-constructor": "off",
+      "@typescript-eslint/no-unused-vars": ["error", {
+        "argsIgnorePattern": "_"
+      }],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "interface",
+          "format": ["PascalCase"],
+          "custom": {
+            "regex": "^I[A-Z]",
+            "match": true
+          }
         }
-    }
+      ],
+      "class-methods-use-this": "off",
+      "prettier/prettier": "error",
+           "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "ts": "never"
+          }
+        ]
+      },
+      "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+      }
 }
